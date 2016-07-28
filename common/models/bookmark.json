@@ -17,18 +17,15 @@
       "required": true,
       "default": "N/A"
     },
-    "createdAt": {
-      "type": "date",
-      "default": null
-    },
-    "updatedAt": {
-      "type": "date",
-      "default": null
-    },
     "ownerId": {
       "type": "string",
       "required": true,
       "default": "N/A"
+    },
+    "isPublic": {
+      "type": "boolean",
+      "required": true,
+      "default": false
     }
   },
   "validations": [],
