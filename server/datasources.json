@@ -1,0 +1,12 @@
+{
+  "db": {
+    "host": "120.26.127.78",
+    "port": 27017,
+    "url": "",
+    "database": "LoopMark",
+    "password": "",
+    "name": "db",
+    "user": "",
+    "connector": "mongodb"
+  }
+}
