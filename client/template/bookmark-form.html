@@ -1,0 +1,22 @@
+<!-- /.box -->
+<div class="box box-default">
+    <div class="box-body">
+        <form>
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control" ng-model="title">
+            </div>
+            <div class="form-group">
+                <label>Link</label>
+                <input type="text" class="form-control" ng-model="link">
+            </div>
+            <div>
+                <input type="checkbox" id="isPublic" ng-model="isPublic"> 
+                <label for="isPublic">is public</label>
+            </div>
+            <div class="form-group">
+                <a href="#" class="btn btn-primary btn-flat pull-right" ng-click="save()">Save</a>
+            </div>
+        </form>
+    </div>
+</div>

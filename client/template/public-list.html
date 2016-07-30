@@ -1,0 +1,31 @@
+<div class="box box-default">
+    <div class="box-body">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th width="70%">Bookmark</th>
+                    <th width="30%">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="bookmark in bookmarks">
+                    <td><a href="{{bookmark.link}}">{{bookmark.title}}</a></td>
+                    <td>{{bookmark.updated | date:'medium'}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        <nav>
+                            <ul class="pager">
+                                <li ng-class="{disabled:page_index==1}" class="previous"><a href="#" ng-click="older()"><span aria-hidden="true">&larr;</span> Older</a></li>
+                                <li ng-class="{disabled:bookmarks.length<10}" class="next"><a href="#" ng-click="newer()">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                            </ul>
+                        </nav>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- /.box-body -->
+</div>

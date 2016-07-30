@@ -1,0 +1,21 @@
+{
+  "name": "loop-mark-client",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "AdminLTE": "adminlte#^2.3.5",
+    "font-awesome": "4.5.0",
+    "ionicons": "2.0.1",
+    "bower-angularjs": "angular.js#^1.3.15",
+    "layer":"*"
+  }
+}
