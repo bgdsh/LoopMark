@@ -14,6 +14,7 @@ module.exports = function (Bookmark) {
         let pageDataCount = 10;
         let pageIndex = page_index || 1;
         let skip = (pageIndex - 1) * pageDataCount;
+        // todo: try to fetch data by Scope
         Bookmark.find({
             where: { isPublic: true },
             skip: skip,
