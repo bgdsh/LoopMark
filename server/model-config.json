@@ -35,9 +35,8 @@
   "Note": {
     "dataSource": "db"
   },
-  "bookmark": {
-    "dataSource": "db",
-    "public": true
+  "Bookmark": {
+    "dataSource": "db"
   },
   "Account": {
     "dataSource": "db",

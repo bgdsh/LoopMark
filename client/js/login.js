@@ -1,7 +1,7 @@
 let app = angular.module('LoginApp',[]);
 app.controller('LoginController',function($scope,$http,$window) {
     $scope.login=function() {
-        $http.post('/api/Users/login',{email:$scope.email,password:$scope.password})
+        $http.post('/api/Accounts/login',{email:$scope.email,password:$scope.password})
         .then(function(res) {
             console.log(res);
             success('Login success！');

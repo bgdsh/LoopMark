@@ -10,6 +10,10 @@
       "type": "string",
       "default": ""
     },
+    "email": {
+      "type": "string",
+      "default": ""
+    },
     "password": {
       "type": "string",
       "default": ""
@@ -20,29 +24,57 @@
     "bookmarks": {
       "type": "hasMany",
       "model": "bookmark",
-      "foreignKey": "ownerId"
+      "foreignKey": "accountId"
     }
   },
   "acls": [
     {
       "accessType": "*",
-      "principalType": "ROLE",
+      "principalType": "Role",
       "principalId": "$everyone",
       "permission": "DENY"
     },
     {
       "accessType": "EXECUTE",
-      "principalType": "ROLE",
+      "principalType": "Role",
       "principalId": "$everyone",
       "permission": "ALLOW",
       "property": "login"
     },
     {
       "accessType": "EXECUTE",
-      "principalType": "ROLE",
+      "principalType": "Role",
       "principalId": "$everyone",
       "permission": "ALLOW",
       "property": "create"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "Role",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "__get__bookmarks"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "Role",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "__create__bookmarks"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "Role",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "__destroyById__bookmarks"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "Role",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "__destroyById__bookmarks"
     }
   ],
   "methods": {}
